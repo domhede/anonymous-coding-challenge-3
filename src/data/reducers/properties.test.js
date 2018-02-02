@@ -6,8 +6,8 @@ describe('properties reducer', () => {
   it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual(
       {
-        properties: [],
-        savedProperties: []
+        all: [],
+        saved: []
       }
     )
   })
@@ -19,7 +19,7 @@ describe('properties reducer', () => {
       })
     ).toEqual(
       {
-        properties: data.results
+        all: data.results
       }
     )
   });
