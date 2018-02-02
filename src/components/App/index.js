@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { fetchProperties } from 'data/actions/propertyActions';
+import { fetchProperties, fetchSavedProperties } from 'data/actions/propertyActions';
 
 import App from './component';
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    fetchProperties
+    fetchProperties,
+    fetchSavedProperties
   }, dispatch)
 );
 
