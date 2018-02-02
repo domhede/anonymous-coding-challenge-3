@@ -12,7 +12,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <PropertyList />
+        <PropertyList type='default' />
+        <PropertyList type='saved' />
       </div>
     );
   }

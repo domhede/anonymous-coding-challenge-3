@@ -32,7 +32,7 @@ describe('App component', () => {
       <App fetchProperties={mockFetchAll} fetchSavedProperties={mockFetchSaved} />
     );
     const actual = wrapper.find(componentsToFind).length;
-    const expected = 1;
+    const expected = 2;
     expect(actual).toBe(expected);
   });
 });
