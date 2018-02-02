@@ -1,5 +1,15 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-const App = () => <div>App</div>;
+import { fetchProperties } from 'data/actions/propertyActions';
 
-export default App;
+import App from './component';
+
+
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators({
+    fetchProperties
+  }, dispatch)
+});
+
+export default connect(null, mapDispatchToProps)(App);
