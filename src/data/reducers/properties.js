@@ -1,4 +1,4 @@
-import { FETCH_PROPERTIES } from '../../constants/actionTypes'
+import { FETCH_PROPERTIES } from 'constants/actionTypes'
 
 const INITIAL_STATE = {
   properties: [],

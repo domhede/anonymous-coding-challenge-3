@@ -1,5 +1,5 @@
-import * as actions from '../actions/propertyActions'
-import * as types from '../../constants/actionTypes'
+import * as actions from 'data/actions/propertyActions'
+import * as types from 'constants/actionTypes'
 import data from '../data.json';
 
 describe('actions', () => {
