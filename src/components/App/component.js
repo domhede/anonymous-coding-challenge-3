@@ -1,5 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const App = () => <div>App</div>;
+class App extends Component {
+  componentWillMount() {
+    this.props.fetchProperties();
+  }
+  render() {
+    return (
+      <div>App</div>
+    );
+  }
+}
 
 export default App;

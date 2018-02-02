@@ -5,11 +5,10 @@ import { fetchProperties } from 'data/actions/propertyActions';
 
 import App from './component';
 
-
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({
     fetchProperties
   }, dispatch)
-});
+);
 
 export default connect(null, mapDispatchToProps)(App);
