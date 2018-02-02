@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from './component';
+import PropertyList from 'components/Common/PropertyList';
 
 
 describe('App component', () => {
@@ -25,4 +26,13 @@ describe('App component', () => {
     );
     expect(mockFetchSaved).toHaveBeenCalled();
   })
+  it('should render a ::PropertyList Component', () => {
+    const componentsToFind = PropertyList;
+    const wrapper = shallow(
+      <App fetchProperties={mockFetchAll} fetchSavedProperties={mockFetchSaved} />
+    );
+    const actual = wrapper.find(componentsToFind).length;
+    const expected = 1;
+    expect(actual).toBe(expected);
+  });
 });

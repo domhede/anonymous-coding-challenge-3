@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropertyList from 'components/Common/PropertyList';
 
 class App extends Component {
   componentWillMount() {
@@ -10,7 +11,9 @@ class App extends Component {
   }
   render() {
     return (
-      <div>App</div>
+      <div>
+        <PropertyList />
+      </div>
     );
   }
 }
