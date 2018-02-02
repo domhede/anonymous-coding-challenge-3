@@ -23,4 +23,16 @@ describe('properties reducer', () => {
       }
     )
   });
+  it('should handle FETCH_SAVED_PROPERTIES', () => {
+    expect(
+      reducer([], {
+        type: types.FETCH_SAVED_PROPERTIES,
+        payload: data.saved
+      })
+    ).toEqual(
+      {
+        saved: data.saved
+      }
+    )
+  });
 });

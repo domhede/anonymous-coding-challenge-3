@@ -1,4 +1,4 @@
-import { FETCH_PROPERTIES } from 'constants/actionTypes'
+import { FETCH_PROPERTIES, FETCH_SAVED_PROPERTIES } from 'constants/actionTypes'
 
 const INITIAL_STATE = {
   all: [],
@@ -13,6 +13,13 @@ export default function properties(state = INITIAL_STATE, action) {
         all: action.payload
 
       }
+    case FETCH_SAVED_PROPERTIES:
+      return {
+        ...state,
+        saved: action.payload
+
+      }
+
 
     default:
       return state
