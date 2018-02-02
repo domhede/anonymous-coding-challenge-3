@@ -1,8 +1,19 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from './component';
-import PropertyList from 'components/Common/PropertyList';
+import configureStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
 
+import App from './component';
+import PropertyList from 'components/Common/PropertyList/component';
+
+const mockStore = configureStore();
+const initialState = {
+  properties: {
+    all: [],
+    saved: []
+  }
+}
+const store = mockStore(initialState);
 
 describe('App component', () => {
   let mockFetchAll = jest.fn();
@@ -13,23 +24,24 @@ describe('App component', () => {
       <App fetchProperties={mockFetchAll} fetchSavedProperties={mockFetchSaved} />
     );
   });
-
   it('should call fetchProperties when mounted', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <App fetchProperties={mockFetchAll} fetchSavedProperties={mockFetchSaved} />
     );
     expect(mockFetchAll).toHaveBeenCalled();
-  })
+  });
   it('should call fetchSavedProperties when mounted', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <App fetchProperties={mockFetchAll} fetchSavedProperties={mockFetchSaved} />
     );
     expect(mockFetchSaved).toHaveBeenCalled();
-  })
-  it('should render a ::PropertyList Component', () => {
+  });
+  it('should render 2 PropertyList Components', () => {
     const componentsToFind = PropertyList;
-    const wrapper = shallow(
-      <App fetchProperties={mockFetchAll} fetchSavedProperties={mockFetchSaved} />
+    const wrapper = mount(
+      <Provider store={store}>
+        <App fetchProperties={mockFetchAll} fetchSavedProperties={mockFetchSaved} />
+      </Provider>
     );
     const actual = wrapper.find(componentsToFind).length;
     const expected = 2;

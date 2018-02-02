@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import PropertyList from 'components/Common/PropertyList';
+import PropertyList from './component';
 
 
 describe('App component', () => {

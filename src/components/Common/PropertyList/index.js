@@ -1,3 +1,8 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import PropertyList from './component';
 
-export default () => <div>Property List</div>;
+const mapStateToProps = (state, {listType}) => ({
+  properties: state.properties[listType]
+});
+
+export default connect(mapStateToProps, null)(PropertyList);
