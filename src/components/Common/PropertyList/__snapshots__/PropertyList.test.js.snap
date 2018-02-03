@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders correctly when prop: listType=all 1`] = `
+exports[`PropertyList component renders correctly when prop: listType=all 1`] = `
 <div
   className="sc-bdVaJa NQGah"
 >
@@ -12,7 +12,7 @@ exports[`App component renders correctly when prop: listType=all 1`] = `
 </div>
 `;
 
-exports[`App component renders correctly when prop: listType=saved 1`] = `
+exports[`PropertyList component renders correctly when prop: listType=saved 1`] = `
 <div
   className="sc-bdVaJa NQGah"
 >

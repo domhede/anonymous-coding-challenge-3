@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import PropertyList from './component';
 
 
-describe('App component', () => {
+describe('PropertyList component', () => {
   it('renders without crashing', () => {
     shallow(
       <PropertyList />
