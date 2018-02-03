@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Property Card component renders correctly when prop: property 1`] = `
+<div
+  className="sc-bdVaJa fYJqaq"
+>
+  <div
+    className="sc-bwzfXH jOBiPv"
+  >
+    <img
+      src="http://i1.au.reastatic.net/agencylogo/XRWXMT/12/20120927204448.gif"
+    />
+  </div>
+  <img
+    src="http://i2.au.reastatic.net/640x480/20bfc8668a30e8cabf045a1cd54814a9042fc715a8be683ba196898333d68cec/main.jpg"
+  />
+  <div
+    className="sc-htpNat fZVNUB"
+  >
+    <p
+      className="sc-bxivhb drhNVP"
+    >
+      $726,500
+    </p>
+  </div>
+</div>
+`;

@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import PropertyList from 'components/Common/PropertyList';
 
 const Wrapper = styled.div`
-  padding-top: 64px;
-  width: 800px;
-  margin: 0 auto;
-  display: flex;
+  background: #f5f5f6;
+  padding: 64px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 32px;
 `;
 
 class App extends Component {

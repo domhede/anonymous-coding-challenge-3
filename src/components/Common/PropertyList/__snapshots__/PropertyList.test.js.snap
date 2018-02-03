@@ -1,25 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PropertyList component renders correctly when prop: listType=all 1`] = `
-<div
-  className="sc-bdVaJa NQGah"
->
+<div>
   <div
-    className="sc-bwzfXH dNiCOA"
+    className="sc-ifAKCX kjiROH"
   >
     Results
   </div>
+  <div />
 </div>
 `;
 
 exports[`PropertyList component renders correctly when prop: listType=saved 1`] = `
-<div
-  className="sc-bdVaJa NQGah"
->
+<div>
   <div
-    className="sc-bwzfXH dNiCOA"
+    className="sc-ifAKCX kjiROH"
   >
     Saved Properties
   </div>
+  <div />
 </div>
 `;
