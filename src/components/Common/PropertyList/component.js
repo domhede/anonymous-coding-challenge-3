@@ -1,8 +1,10 @@
 import React from 'react';
 
-const PropertyList = props => {
+const PropertyList = ({listType}) => {
+  const headerText = listType === 'all' ? 'Results' : 'Saved Properties';
+
   return (
-    <div>Property List</div>
+    <div>{headerText}</div>
   );
 }
 
