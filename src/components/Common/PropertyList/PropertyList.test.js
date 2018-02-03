@@ -7,18 +7,18 @@ import PropertyList from './component';
 describe('PropertyList component', () => {
   it('renders without crashing', () => {
     shallow(
-      <PropertyList />
+      <PropertyList properties={[]} />
     );
   });
   it('renders correctly when prop: listType=all', () => {
     const rendered = renderer.create(
-      <PropertyList listType='all' />
+      <PropertyList properties={[]} listType='all' />
     );
     expect(rendered.toJSON()).toMatchSnapshot();
   });
   it('renders correctly when prop: listType=saved', () => {
     const rendered = renderer.create(
-      <PropertyList listType='saved' />
+      <PropertyList properties={[]} listType='saved' />
     );
     expect(rendered.toJSON()).toMatchSnapshot();
   });
