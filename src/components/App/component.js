@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import PropertyList from 'components/Common/PropertyList';
+
+const Wrapper = styled.div`
+  padding-top: 64px;
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+`;
 
 class App extends Component {
   componentWillMount() {
@@ -11,10 +19,10 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <Wrapper>
         <PropertyList listType='all' />
         <PropertyList listType='saved' />
-      </div>
+      </Wrapper>
     );
   }
 }
