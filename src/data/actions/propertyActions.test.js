@@ -21,18 +21,18 @@ describe('property actions', () => {
     expect(actions.fetchSavedProperties()).toEqual(expectedAction)
   }),
   it('should create an action to save a property', () => {
-    const propertyToSave = data.results[0];
+    const propertyToSave = data.results[0].id;
     const expectedAction = {
       type: types.SAVE_PROPERTY,
-      payload: data.results[0]
+      payload: data.results[0].id
     }
     expect(actions.saveProperty(propertyToSave)).toEqual(expectedAction)
   }),
   it('should create an action to remove a property', () => {
-    const propertyToRemove = testData.afterSave[1];
+    const propertyToRemove = testData.afterSave[1].id;
     const expectedAction = {
       type: types.REMOVE_PROPERTY,
-      payload: testData.afterSave[1]
+      payload: testData.afterSave[1].id
     }
     expect(actions.removeProperty(propertyToRemove)).toEqual(expectedAction)
   })

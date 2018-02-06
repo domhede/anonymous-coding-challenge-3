@@ -44,7 +44,7 @@ describe('properties reducer', () => {
     expect(
       reducer(beforeSaveState, {
         type: types.SAVE_PROPERTY,
-        payload: data.results[0]
+        payload: data.results[0].id
       })
     ).toEqual(
       {
@@ -60,7 +60,7 @@ describe('properties reducer', () => {
         saved: testData.afterSave
       }, {
         type: types.REMOVE_PROPERTY,
-        payload: data.results[1]
+        payload: data.results[1].id
       })
     ).toEqual(
       beforeSaveState

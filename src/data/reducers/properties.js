@@ -25,13 +25,15 @@ export default function properties(state = INITIAL_STATE, action) {
         saved: action.payload
       }
     case SAVE_PROPERTY:
-      const propertyToSave = [action.payload];
+      const propertyToSaveId = action.payload;
+      const propertyToSave = state.all.find(property => property.id === propertyToSaveId);
+
       return {
         ...state,
-        saved: update(state.saved, {$push: propertyToSave})
+        saved: update(state.saved, {$push: [propertyToSave]})
       }
     case REMOVE_PROPERTY:
-      const propertyToRemoveId = [action.payload.id];
+      const propertyToRemoveId = action.payload;
       const indexOfPropertyToRemove = state.saved.findIndex(
         property => property.id === propertyToRemoveId
       );
