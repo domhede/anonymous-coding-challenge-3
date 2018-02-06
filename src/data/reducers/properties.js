@@ -3,7 +3,8 @@ import update from 'immutability-helper';
 import {
   FETCH_PROPERTIES,
   FETCH_SAVED_PROPERTIES,
-  SAVE_PROPERTY
+  SAVE_PROPERTY,
+  REMOVE_PROPERTY
 } from 'constants/actionTypes'
 
 const INITIAL_STATE = {
@@ -30,6 +31,15 @@ export default function properties(state = INITIAL_STATE, action) {
       return {
         ...state,
         saved: update(state.saved, {$push: propertyToSave})
+      }
+    case REMOVE_PROPERTY:
+      const propertyToRemoveId = [action.payload.id];
+      const indexOfPropertyToRemove = state.saved.findIndex(
+        property => property.id === propertyToRemoveId
+      );
+      return {
+        ...state,
+        saved: update(state.saved, {$splice: [[indexOfPropertyToRemove, 1]]})
       }
     default:
       return state

@@ -53,4 +53,17 @@ describe('properties reducer', () => {
       }
     )
   });
+  it('should handle REMOVE_PROPERTY', () => {
+    expect(
+      reducer({
+        all: beforeSaveState.all,
+        saved: testData.afterSave
+      }, {
+        type: types.REMOVE_PROPERTY,
+        payload: data.results[1]
+      })
+    ).toEqual(
+      beforeSaveState
+    )
+  });
 });
