@@ -8,6 +8,7 @@ exports[`Property Card component renders correctly when prop: property 1`] = `
     className="sc-ifAKCX kECKUx"
   >
     <img
+      alt="agency-logo"
       src="http://i1.au.reastatic.net/agencylogo/XRWXMT/12/20120927204448.gif"
     />
   </div>

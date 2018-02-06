@@ -55,7 +55,7 @@ const PropertyCard = ({listType, id, price, agency, mainImage}) => {
   return (
     <Wrapper>
       <Header bgColor={agency.brandingColors.primary} >
-        <img src={agency.logo} />
+        <img alt='agency-logo' src={agency.logo} />
       </Header>
       <ImageWrapper>
         <Overlay className='imageOverlay' />
