@@ -44,8 +44,18 @@ const ImageWrapper = styled.div`
 `;
 const Header = styled.div`
   background-color: ${props => props.bgColor};
-  height: 27px;
+  height: 30px;
   padding: 8px 7px;
+`;
+const Image = styled.div`
+  background: url(${props => props.imageUrl});
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-bottom: 75%;
+  background-position: 50% 50%;
+
 `;
 const Footer = styled.div`
   padding: 18px 24px;
@@ -62,7 +72,7 @@ const PropertyCard = ({id, price, agency, mainImage}) => {
       </Header>
       <ImageWrapper>
         <Overlay className='imageOverlay' />
-        <img src={mainImage} />
+        <Image imageUrl={mainImage} />
       </ImageWrapper>
       <Footer>
         <Price>{price}</Price>
