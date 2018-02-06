@@ -6,7 +6,11 @@ import testData from '../testData.json';
 const beforeSaveState = {
   all: data.results,
   saved: data.saved
-}
+};
+const afterSaveState = {
+  all: beforeSaveState.all,
+  saved: testData.afterSave
+};
 describe('properties reducer', () => {
   it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual(
@@ -55,15 +59,22 @@ describe('properties reducer', () => {
   });
   it('should handle REMOVE_PROPERTY', () => {
     expect(
-      reducer({
-        all: beforeSaveState.all,
-        saved: testData.afterSave
-      }, {
+      reducer(afterSaveState, {
         type: types.REMOVE_PROPERTY,
         payload: data.results[1].id
       })
     ).toEqual(
       beforeSaveState
+    )
+  });
+  it('should create block the action to save a property if the property is already saved', () => {
+    expect(
+      reducer(afterSaveState, {
+        type: types.SAVE_PROPERTY,
+        payload: data.results[0].id
+      })
+    ).toEqual(
+      afterSaveState
     )
   });
 });

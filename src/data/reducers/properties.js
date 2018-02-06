@@ -26,8 +26,11 @@ export default function properties(state = INITIAL_STATE, action) {
       }
     case SAVE_PROPERTY:
       const propertyToSaveId = action.payload;
-      const propertyToSave = state.all.find(property => property.id === propertyToSaveId);
+      if (state.saved.findIndex(p => p.id === propertyToSaveId) !== -1) {
+        return state;
+      }
 
+      const propertyToSave = state.all.find(property => property.id === propertyToSaveId);
       return {
         ...state,
         saved: update(state.saved, {$push: [propertyToSave]})
