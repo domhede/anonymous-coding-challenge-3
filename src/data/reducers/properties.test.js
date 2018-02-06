@@ -1,7 +1,12 @@
 import reducer from './properties';
 import * as types from '../../constants/ActionTypes';
 import data from '../data.json';
+import testData from '../testData.json';
 
+const beforeSaveState = {
+  all: data.results,
+  saved: data.saved
+}
 describe('properties reducer', () => {
   it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual(
@@ -32,6 +37,19 @@ describe('properties reducer', () => {
     ).toEqual(
       {
         saved: data.saved
+      }
+    )
+  });
+  it('should handle SAVE_PROPERTY', () => {
+    expect(
+      reducer(beforeSaveState, {
+        type: types.SAVE_PROPERTY,
+        payload: data.results[0]
+      })
+    ).toEqual(
+      {
+        all: beforeSaveState.all,
+        saved: testData.afterSave
       }
     )
   });
