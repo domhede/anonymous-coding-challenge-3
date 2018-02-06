@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AddButton from './AddButton';
+import PropertyButton from './PropertyButton';
 
 const Overlay = styled.div`
   position: absolute;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   margin-bottom: 30px;
   position: relative;
   &:hover {
-    .addButton {
+    .propertyButton {
       display: inline;
     }
     .imageOverlay {
@@ -64,7 +64,7 @@ const PropertyCard = ({id, price, agency, mainImage}) => {
       <Footer>
         <Price>{price}</Price>
       </Footer>
-      <AddButton className='addButton'>Add property</AddButton>
+      <PropertyButton actionType='Add' className='propertyButton' />
     </Wrapper>
   );
 }

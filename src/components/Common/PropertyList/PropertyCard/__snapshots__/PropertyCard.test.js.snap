@@ -2,7 +2,7 @@
 
 exports[`Property Card component renders correctly when prop: property 1`] = `
 <div
-  className="sc-htpNat lmslkB"
+  className="sc-htpNat iTTEgg"
 >
   <div
     className="sc-ifAKCX kECKUx"
@@ -31,9 +31,10 @@ exports[`Property Card component renders correctly when prop: property 1`] = `
     </p>
   </div>
   <div
-    className="addButton sc-bdVaJa eZMaBW"
+    className="propertyButton sc-bdVaJa eZMaBW"
   >
-    Add property
+    Add
+     property
   </div>
 </div>
 `;

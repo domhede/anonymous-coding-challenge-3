@@ -16,10 +16,10 @@ const Button = styled.div`
   }
 `;
 
-const AddButton = (props) => {
+const PropertyButton = props => {
   return (
-    <Button {...props}>Add property</Button>
+    <Button {...props}>{props.actionType} property</Button>
   );
 }
 
-export default AddButton;
+export default PropertyButton;
