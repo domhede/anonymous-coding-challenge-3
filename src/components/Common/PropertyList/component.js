@@ -8,6 +8,20 @@ const Header = styled.div`
   font-size: 22px;
   margin-bottom: 32px;
 `;
+const Empty = styled.div`
+  text-align: center;
+  padding: 64px;
+`;
+Empty.displayName = 'Empty';
+
+const renderProperties = (properties, listType) => {
+  if (!properties.length) {
+    return <Empty>You have no saved properties. <br></br>To save, hover over a property and click the add button</Empty>
+  }
+  return properties.map(property => {
+    return <PropertyCard listType={listType} key={property.id} {...property} />
+  })
+}
 
 const PropertyList = ({listType, properties}) => {
   const headerText = listType === 'all' ? 'Results' : 'Saved Properties';
@@ -16,9 +30,7 @@ const PropertyList = ({listType, properties}) => {
     <div>
       <Header>{headerText}</Header>
       <div>
-        {properties.map(property => {
-          return <PropertyCard listType={listType} key={property.id} {...property} />
-        })}
+        {renderProperties(properties, listType)}
       </div>
     </div>
   );

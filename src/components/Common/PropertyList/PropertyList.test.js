@@ -22,5 +22,13 @@ describe('PropertyList component', () => {
     );
     expect(rendered.toJSON()).toMatchSnapshot();
   });
+  it('shows empty state when no properties', () => {
+    const wrapper = shallow(
+      <PropertyList
+        properties={[]} listType='saved'
+      />
+    );
+    expect(wrapper.find('Empty').length).toEqual(1);
+  })
 });
 

@@ -3,21 +3,37 @@
 exports[`PropertyList component renders correctly when prop: listType=all 1`] = `
 <div>
   <div
-    className="sc-htoDjs fSfxfK"
+    className="sc-htoDjs dzeWxo"
   >
     Results
   </div>
-  <div />
+  <div>
+    <div
+      className="sc-dnqmqq cuApdr"
+    >
+      You have no saved properties. 
+      <br />
+      To save, hover over a property and click the add button
+    </div>
+  </div>
 </div>
 `;
 
 exports[`PropertyList component renders correctly when prop: listType=saved 1`] = `
 <div>
   <div
-    className="sc-htoDjs fSfxfK"
+    className="sc-htoDjs dzeWxo"
   >
     Saved Properties
   </div>
-  <div />
+  <div>
+    <div
+      className="sc-dnqmqq cuApdr"
+    >
+      You have no saved properties. 
+      <br />
+      To save, hover over a property and click the add button
+    </div>
+  </div>
 </div>
 `;
