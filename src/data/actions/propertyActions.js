@@ -2,7 +2,8 @@ import data from '../data.json';
 import {
   FETCH_PROPERTIES,
   FETCH_SAVED_PROPERTIES,
-  SAVE_PROPERTY
+  SAVE_PROPERTY,
+  REMOVE_PROPERTY
 } from 'constants/actionTypes'
 
 export const fetchProperties = () => ({
@@ -19,3 +20,8 @@ export const saveProperty = propertyToSave => ({
   type: SAVE_PROPERTY,
   payload: propertyToSave
 });
+
+export const removeProperty = propertyToRemove => ({
+  type: REMOVE_PROPERTY,
+  payload: propertyToRemove
+})

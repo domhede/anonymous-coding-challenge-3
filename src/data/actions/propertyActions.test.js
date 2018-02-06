@@ -1,6 +1,7 @@
 import * as actions from 'data/actions/propertyActions'
 import * as types from 'constants/actionTypes'
 import data from '../data.json';
+import testData from '../testData.json';
 
 describe('property actions', () => {
   it('should create an action to fetch all properties', () => {
@@ -26,5 +27,13 @@ describe('property actions', () => {
       payload: data.results[0]
     }
     expect(actions.saveProperty(propertyToSave)).toEqual(expectedAction)
+  }),
+  it('should create an action to remove a property', () => {
+    const propertyToRemove = testData.afterSave[1];
+    const expectedAction = {
+      type: types.REMOVE_PROPERTY,
+      payload: testData.afterSave[1]
+    }
+    expect(actions.removeProperty(propertyToRemove)).toEqual(expectedAction)
   })
 })
