@@ -3,7 +3,7 @@
 exports[`PropertyList component renders correctly when prop: listType=all 1`] = `
 <div>
   <div
-    className="sc-ifAKCX kjiROH"
+    className="sc-htoDjs fSfxfK"
   >
     Results
   </div>
@@ -14,7 +14,7 @@ exports[`PropertyList component renders correctly when prop: listType=all 1`] = 
 exports[`PropertyList component renders correctly when prop: listType=saved 1`] = `
 <div>
   <div
-    className="sc-ifAKCX kjiROH"
+    className="sc-htoDjs fSfxfK"
   >
     Saved Properties
   </div>

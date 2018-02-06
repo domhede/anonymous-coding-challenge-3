@@ -2,26 +2,38 @@
 
 exports[`Property Card component renders correctly when prop: property 1`] = `
 <div
-  className="sc-bdVaJa fYJqaq"
+  className="sc-htpNat lmslkB"
 >
   <div
-    className="sc-bwzfXH jOBiPv"
+    className="sc-ifAKCX kECKUx"
   >
     <img
       src="http://i1.au.reastatic.net/agencylogo/XRWXMT/12/20120927204448.gif"
     />
   </div>
-  <img
-    src="http://i2.au.reastatic.net/640x480/20bfc8668a30e8cabf045a1cd54814a9042fc715a8be683ba196898333d68cec/main.jpg"
-  />
   <div
-    className="sc-htpNat fZVNUB"
+    className="sc-bxivhb ixLYhq"
+  >
+    <div
+      className="imageOverlay sc-bwzfXH hiiADv"
+    />
+    <div
+      className="sc-EHOje dOYSlg"
+    />
+  </div>
+  <div
+    className="sc-bZQynM bTOkHN"
   >
     <p
-      className="sc-bxivhb drhNVP"
+      className="sc-gzVnrw lmcKFS"
     >
       $726,500
     </p>
+  </div>
+  <div
+    className="addButton sc-bdVaJa eZMaBW"
+  >
+    Add property
   </div>
 </div>
 `;

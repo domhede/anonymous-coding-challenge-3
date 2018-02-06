@@ -1,20 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import AddButton from './AddButton';
 
-const AddButton = styled.div`
-  display: none;
-  text-align: center;
-  position: absolute;
-  top: 220px;
-  left: 240px;
-  width: 100px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 32px;
-  :hover {
-    cursor: pointer;
-  }
-`;
 const Overlay = styled.div`
   position: absolute;
   width: 100%;
