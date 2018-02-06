@@ -1,16 +1,17 @@
 import reducer from './properties';
 import * as types from '../../constants/ActionTypes';
-import data from '../data.json';
-import testData from '../testData.json';
+import testInputs from '../testInputs.json';
 
 const beforeSaveState = {
-  all: data.results,
-  saved: data.saved
+  all: testInputs.all,
+  saved: testInputs.saved
 };
+
 const afterSaveState = {
-  all: beforeSaveState.all,
-  saved: testData.afterSave
+  all: testInputs.all,
+  saved: testInputs.afterSave
 };
+
 describe('properties reducer', () => {
   it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual(
@@ -24,11 +25,11 @@ describe('properties reducer', () => {
     expect(
       reducer([], {
         type: types.FETCH_PROPERTIES,
-        payload: data.results
+        payload: testInputs.all
       })
     ).toEqual(
       {
-        all: data.results
+        all: testInputs.all
       }
     )
   });
@@ -36,11 +37,11 @@ describe('properties reducer', () => {
     expect(
       reducer([], {
         type: types.FETCH_SAVED_PROPERTIES,
-        payload: data.saved
+        payload: testInputs.saved
       })
     ).toEqual(
       {
-        saved: data.saved
+        saved: testInputs.saved
       }
     )
   });
@@ -48,12 +49,12 @@ describe('properties reducer', () => {
     expect(
       reducer(beforeSaveState, {
         type: types.SAVE_PROPERTY,
-        payload: data.results[0].id
+        payload: testInputs.all[0].id
       })
     ).toEqual(
       {
-        all: beforeSaveState.all,
-        saved: testData.afterSave
+        all: testInputs.all,
+        saved: testInputs.afterSave
       }
     )
   });
@@ -61,7 +62,7 @@ describe('properties reducer', () => {
     expect(
       reducer(afterSaveState, {
         type: types.REMOVE_PROPERTY,
-        payload: data.results[1].id
+        payload: testInputs.all[1].id
       })
     ).toEqual(
       beforeSaveState
@@ -71,7 +72,7 @@ describe('properties reducer', () => {
     expect(
       reducer(afterSaveState, {
         type: types.SAVE_PROPERTY,
-        payload: data.results[0].id
+        payload: testInputs.all[0].id
       })
     ).toEqual(
       afterSaveState
