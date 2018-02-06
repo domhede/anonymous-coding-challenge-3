@@ -51,7 +51,7 @@ const Footer = styled.div`
 const Price = styled.p`
   font-size: 20px;
 `;
-const PropertyCard = ({id, price, agency, mainImage}) => {
+const PropertyCard = ({listType, id, price, agency, mainImage}) => {
   return (
     <Wrapper>
       <Header bgColor={agency.brandingColors.primary} >
@@ -64,7 +64,10 @@ const PropertyCard = ({id, price, agency, mainImage}) => {
       <Footer>
         <Price>{price}</Price>
       </Footer>
-      <PropertyButton actionType='Add' className='propertyButton' />
+      <PropertyButton
+        actionType={listType === 'all' ? 'Add' : 'Remove'}
+        className='propertyButton'
+      />
     </Wrapper>
   );
 }

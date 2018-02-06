@@ -15,7 +15,7 @@ const PropertyList = ({listType, properties}) => {
       <Header>{headerText}</Header>
       <div>
         {properties.map(property => {
-          return <PropertyCard key={property.id} {...property} />
+          return <PropertyCard listType={listType} key={property.id} {...property} />
         })}
       </div>
     </div>

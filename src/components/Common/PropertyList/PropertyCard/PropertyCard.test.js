@@ -10,12 +10,12 @@ const property = data.results[0];
 describe('Property Card component', () => {
   it('renders without crashing', () => {
     shallow(
-      <PropertyCard {...property} />
+      <PropertyCard {...property} listType='all' />
     );
   });
   it('renders correctly when prop: property', () => {
     const rendered = renderer.create(
-      <PropertyCard {...property} />
+      <PropertyCard {...property} listType='all' />
     );
     expect(rendered.toJSON()).toMatchSnapshot();
   });
