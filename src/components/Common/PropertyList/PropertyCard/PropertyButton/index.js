@@ -1,25 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import { connect } from 'react-redux';
+import PropertyButton from './component';
+import { bindActionCreators } from 'redux';
 
-const Button = styled.div`
-  display: none;
-  text-align: center;
-  position: absolute;
-  top: 37%;
-  left: 30%;
-  width: 30%;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 32px;
-  :hover {
-    cursor: pointer;
-  }
-`;
+import { saveProperty, removeProperty } from 'data/actions/propertyActions';
 
-const PropertyButton = props => {
-  return (
-    <Button {...props}>{props.actionType} property</Button>
-  );
-}
+const mapDispatchToProps = dispatch => (
+   bindActionCreators({
+      saveProperty,
+      removeProperty
+  }, dispatch)
+);
 
-export default PropertyButton;
+export default connect(null, mapDispatchToProps)(PropertyButton);

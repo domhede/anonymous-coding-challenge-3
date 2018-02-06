@@ -65,6 +65,7 @@ const PropertyCard = ({listType, id, price, agency, mainImage}) => {
         <Price>{price}</Price>
       </Footer>
       <PropertyButton
+        id={id}
         actionType={listType === 'all' ? 'Add' : 'Remove'}
         className='propertyButton'
       />

@@ -3,6 +3,7 @@
 exports[`PropertyButton component shows correct text with actionType prop: Add 1`] = `
 <div
   className="propertyButton sc-bdVaJa eZMaBW"
+  onClick={[Function]}
 >
   Add
    property
@@ -12,6 +13,7 @@ exports[`PropertyButton component shows correct text with actionType prop: Add 1
 exports[`PropertyButton component shows correct text with actionType prop: Remove 1`] = `
 <div
   className="propertyButton sc-bdVaJa eZMaBW"
+  onClick={[Function]}
 >
   Remove
    property
