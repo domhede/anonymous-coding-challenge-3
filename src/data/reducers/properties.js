@@ -18,13 +18,11 @@ export default function properties(state = INITIAL_STATE, action) {
       return {
         ...state,
         all: action.payload
-
       }
     case FETCH_SAVED_PROPERTIES:
       return {
         ...state,
         saved: action.payload
-
       }
     case SAVE_PROPERTY:
       const propertyToSave = [action.payload];

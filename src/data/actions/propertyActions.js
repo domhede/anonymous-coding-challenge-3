@@ -1,5 +1,9 @@
 import data from '../data.json';
-import { FETCH_PROPERTIES, FETCH_SAVED_PROPERTIES } from '../../constants/actionTypes'
+import {
+  FETCH_PROPERTIES,
+  FETCH_SAVED_PROPERTIES,
+  SAVE_PROPERTY
+} from 'constants/actionTypes'
 
 export const fetchProperties = () => ({
   type: FETCH_PROPERTIES,
@@ -9,4 +13,9 @@ export const fetchProperties = () => ({
 export const fetchSavedProperties = () => ({
   type: FETCH_SAVED_PROPERTIES,
   payload: data.saved
+});
+
+export const saveProperty = propertyToSave => ({
+  type: SAVE_PROPERTY,
+  payload: propertyToSave
 });

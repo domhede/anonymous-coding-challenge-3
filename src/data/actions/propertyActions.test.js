@@ -18,5 +18,13 @@ describe('property actions', () => {
       payload: savedProperties
     }
     expect(actions.fetchSavedProperties()).toEqual(expectedAction)
+  }),
+  it('should create an action to save a property', () => {
+    const propertyToSave = data.results[0];
+    const expectedAction = {
+      type: types.SAVE_PROPERTY,
+      payload: data.results[0]
+    }
+    expect(actions.saveProperty(propertyToSave)).toEqual(expectedAction)
   })
 })
