@@ -3,13 +3,16 @@ import styled from 'styled-components';
 import PropertyList from 'components/Common/PropertyList';
 
 const Wrapper = styled.div`
-  background: #f5f5f6;
-  padding: 64px;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 32px;
+  padding: 64px 0px;
+  width: 80%;
+  margin: auto;
 `;
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 32px;
+`;
 class App extends Component {
   componentWillMount() {
     this.fetchAppData();
@@ -21,8 +24,10 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <PropertyList listType='all' />
-        <PropertyList listType='saved' />
+        <Grid>
+          <PropertyList listType='all' />
+          <PropertyList listType='saved' />
+        </Grid>
       </Wrapper>
     );
   }

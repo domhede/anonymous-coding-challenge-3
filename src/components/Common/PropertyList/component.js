@@ -5,6 +5,8 @@ import PropertyCard from './PropertyCard';
 const Header = styled.div`
   text-align: center;
   padding: 8px;
+  font-size: 22px;
+  margin-bottom: 32px;
 `;
 
 const PropertyList = ({listType, properties}) => {
