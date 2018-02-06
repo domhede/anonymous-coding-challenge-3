@@ -16,11 +16,13 @@ const Button = styled.div`
   }
 `;
 
+Button.displayName = 'Button';
+
 const PropertyButton = ({ id, actionType, removeProperty, saveProperty, ...rest }) => {
   const clickHandler = actionType === 'Add' ? saveProperty : removeProperty;
 
   return (
-    <Button onClick={() => clickHandler(id)} {...rest}>{actionType} property</Button>
+    <Button onClick={ () => clickHandler(id) } {...rest}>{actionType} property</Button>
   );
 }
 
