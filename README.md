@@ -1,4 +1,4 @@
-## REA UI Developer Test
+## Anonymous Coding Challenge 3 - React/Redux
 
 This project displays a list of properties from a mock backend data set.  The user is able to create a list of saved properties.
 
